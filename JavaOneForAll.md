@@ -19,4 +19,4 @@ The JDK includes the JRE and the javac compiler, which converts .java files into
 
 In this class, we were compiling our first Hello World program in Java.
 
-## Class 06 - 
+## Class 07 - 
