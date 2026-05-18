@@ -84,3 +84,40 @@ Always return true or false
 
 - ++
 - \--
+
+## Conditional Statement
+
+### If / Else
+
+The if statement is the fundamental decision-making construct that executes a block of code when a specified boolean expression evaluates to true
+
+    double num = 2;
+    if (num % 2 == 0){
+        System.out.println("Even");
+    } else {
+        System.out.println("Odd");
+    }
+
+### Ternary Operator
+
+The ternary operator is an alternative to simple if statements and is represented by the following syntax: condition ? true : false
+
+    double num = 2;
+    String result = num % 2 == 0 ? "Even" : "Odd";
+
+### Switch / Case
+
+The switch case statement is a control flow structure that executes a specific block of code on the value of a single expression, offering a cleaner alternative to multiple if-else statements.
+
+The switch supports the following types: byte, short, int, char, String and Enum.
+
+    switch (variable) {
+    case value1:
+        // code for value1
+        break;
+    case value2:
+        // code for value2
+        break;
+    default:
+        // code if no case matches
+    }
