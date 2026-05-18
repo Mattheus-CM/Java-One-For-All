@@ -121,3 +121,37 @@ The switch supports the following types: byte, short, int, char, String and Enum
     default:
         // code if no case matches
     }
+
+## Loops
+
+### While
+
+The while loop is an entry-controlled control flow statement that repeatedly executes a block of code as long as a specified boolean condition evaluates to true.
+
+    while(condition){
+        // code to be executed
+    }
+
+- The condition is evalueted before each iteration. If false, the code will not execute.
+
+### Do While
+
+The difference between while and do while is that the do while loop is executed at least once;
+
+    do {
+        // code to be executed
+    } while(condition)
+
+### For
+
+The for loop is a control flow statement used to repeat a block of code a specific number of times, primarily when the number of iterations is know beforehand.
+
+    for (int i = 0; i <= 10; i++){
+        System.out.println(i);
+    }
+
+### Control flow keywords
+
+- break statement is a control flow keyword used to terminate a loop or a switch statement immediately.
+
+- continue statement is used to skip the current iteration of a loop and immediately preceed to the next one, without terminating the loop itself.
