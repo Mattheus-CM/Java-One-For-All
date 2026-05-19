@@ -155,3 +155,17 @@ The for loop is a control flow statement used to repeat a block of code a specif
 - break statement is a control flow keyword used to terminate a loop or a switch statement immediately.
 
 - continue statement is used to skip the current iteration of a loop and immediately preceed to the next one, without terminating the loop itself.
+
+## Arrays
+
+An array is a fixed-size data structure that stores a colection of elements of the same data type. Arrays have a fixed length defined at creation time, witch cannot be changed.
+
+    int[] numbers = new int[5];
+
+Elements are accessed or modified using the index operator. It is common to use loops to iterate through array values.
+
+There is a simpler for loop called foreach. It is simpler because it does not need an index to iterate through the array. Its syntax is:
+
+    for (int number : numbers){
+        // code to be executed
+    }
