@@ -169,3 +169,16 @@ There is a simpler for loop called foreach. It is simpler because it does not ne
     for (int number : numbers){
         // code to be executed
     }
+
+## Multidimensional Arrays
+
+A multidimensional array is an array of arrays. It is as if each position in the first array contains a reference to another array. In this course, I will only study 2D multidimensional arrays, but it is possible to create 3D or even more complex multidimensional arrays. However, this also increases the complexity.
+
+For each array dimension, it is necessary to use a for loop to iterate through it:
+
+    int[][] numbers = new int[][]{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    for (int[] baseArray : numbers){
+        for (int num : baseArray){
+            System.out.println(num);
+        }
+    }
