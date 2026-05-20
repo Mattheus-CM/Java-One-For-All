@@ -182,3 +182,11 @@ For each array dimension, it is necessary to use a for loop to iterate through i
             System.out.println(num);
         }
     }
+
+## Object Orientation
+
+### Introduction to Classes
+
+A Class is a blueprint (template) used to create objects, which are instaces of that class.
+
+- Cohesion -> High cohesion indicates that a class is designed with a single, well-focused purpose, where all methods and fields work together to archieve a commmon goal.
