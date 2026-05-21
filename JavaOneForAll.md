@@ -190,3 +190,25 @@ For each array dimension, it is necessary to use a for loop to iterate through i
 A Class is a blueprint (template) used to create objects, which are instaces of that class.
 
 - Cohesion -> High cohesion indicates that a class is designed with a single, well-focused purpose, where all methods and fields work together to archieve a commmon goal.
+
+### Introduction to Methods
+
+A method is a reuseble block of code designed to perform specific tasks. A method syntax:
+
+    accessModifier returnType methodName(parameters){
+        // code
+        return value; // if returnType is not void
+    }
+
+There are some important things to know about method parameters. Any variable type can be used as a parameter, but the passed value may behave differently than expected.
+
+- if the parameter is a primitive type, the method recieves a copy of the value. __It does not change the original value!__
+- if the parameter is a reference type, the method recieves a copy of the memory address. __It may change the original value!__
+
+__this__ -> refers to the current object within an instance method or constructor.
+
+__VarArgs__ -> allows methods to accept a variable number of arguments of a specific type. The VarArgs parameter __MUST BE THE LAST__ in the method signature. Your syntax:
+
+    public void methodName (int... varArgsParameter){
+        // code
+    }
