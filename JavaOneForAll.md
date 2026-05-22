@@ -50,7 +50,7 @@ Casting is the process of converting one data type into another
 
 - Addition (+)
 - Subtraction (-)
-- Multiplication (*)
+- Multiplication (\*)
 - Division (/)
 - Modulo (%)
 
@@ -76,7 +76,7 @@ Always return true or false
 - =
 - +=
 - -=
-- *=
+- \*=
 - /=
 - %=
 
@@ -202,13 +202,24 @@ A method is a reuseble block of code designed to perform specific tasks. A metho
 
 There are some important things to know about method parameters. Any variable type can be used as a parameter, but the passed value may behave differently than expected.
 
-- if the parameter is a primitive type, the method recieves a copy of the value. __It does not change the original value!__
-- if the parameter is a reference type, the method recieves a copy of the memory address. __It may change the original value!__
+- if the parameter is a primitive type, the method recieves a copy of the value. **It does not change the original value!**
+- if the parameter is a reference type, the method recieves a copy of the memory address. **It may change the original value!**
 
-__this__ -> refers to the current object within an instance method or constructor.
+**this** -> refers to the current object within an instance method or constructor.
 
-__VarArgs__ -> allows methods to accept a variable number of arguments of a specific type. The VarArgs parameter __MUST BE THE LAST__ in the method signature. Your syntax:
+**VarArgs** -> allows methods to accept a variable number of arguments of a specific type. The VarArgs parameter **MUST BE THE LAST** in the method signature. Your syntax:
 
     public void methodName (int... varArgsParameter){
         // code
     }
+
+### Acess Modifier
+
+Acess modifiers are keywords that control the visibility and accessivility of classes, methods, variables and constructors.
+
+In Java, there are four access levels:
+
+- Public -> Acessible from anywhere.
+- Default -> Acessible only within the same package.
+- Protected -> Acessible within the same package and by subclasses in other packages.
+- Private -> Acessible only within the same class.

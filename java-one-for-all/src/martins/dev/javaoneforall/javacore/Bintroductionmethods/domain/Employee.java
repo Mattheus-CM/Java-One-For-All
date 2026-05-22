@@ -1,9 +1,10 @@
 package martins.dev.javaoneforall.javacore.Bintroductionmethods.domain;
 
 public class Employee {
-    public String name;
-    public short age;
-    public double[] salaries;
+    private String name;
+    private int age;
+    private double[] salaries;
+    private double average;
 
     public void print() {
         System.out.println("--------------------------");
@@ -22,10 +23,37 @@ public class Employee {
 
     public void calculateAverageSalary() {
         if (salaries == null) return;
-        double sum = 0;
         for (double salary : salaries) {
-            sum += salary;
+            average += salary;
         }
-        System.out.println("Average salary: " + sum / salaries.length);
+        System.out.println("Average salary: " + average / salaries.length);
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setSalaries(double[] salaries) {
+        this.salaries = salaries;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public double[] getSalaries() {
+        return salaries;
+    }
+
+    public double getAverage() {
+        return average;
     }
 }
