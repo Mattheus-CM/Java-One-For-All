@@ -236,3 +236,33 @@ Java method overloading allows a class to define multiple methods with the same 
         this.printSomething(name);
         System.out.println(age);
     }
+
+### Constructor
+
+A Java Constructor is a special block of code that initializes a newly created object. It has the same name as the class and does not have a return type.
+
+The constructor syntax:
+
+    public class Test {
+        private int num;
+
+        public Test(int num) {
+            this.num = num;
+        }
+    }
+
+Constructor overloading works similarly to method overloading, but to call another constructor, you use the this() keyword.
+
+    public class Test {
+        private int num;
+        private int num2;
+
+        public Test(int num) {
+            this.num = num;
+        }
+
+        public Test(int num, int num2) {
+            this(num);
+            this.num2 = num2;
+        }
+    }
