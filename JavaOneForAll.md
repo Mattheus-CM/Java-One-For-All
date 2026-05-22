@@ -223,3 +223,16 @@ In Java, there are four access levels:
 - Default -> Acessible only within the same package.
 - Protected -> Acessible within the same package and by subclasses in other packages.
 - Private -> Acessible only within the same class.
+
+### Overloading methods
+
+Java method overloading allows a class to define multiple methods with the same name, but different parameter list(number, type or order).
+
+    public void printSomething(String name) {
+        System.out.println(name);
+    }
+
+    public void printSomething(String name, int age) {
+        this.printSomething(name);
+        System.out.println(age);
+    }
