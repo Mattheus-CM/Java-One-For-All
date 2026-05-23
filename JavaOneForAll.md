@@ -266,3 +266,22 @@ Constructor overloading works similarly to method overloading, but to call anoth
             this.num2 = num2;
         }
     }
+
+### Initialization Block
+
+An initialization block is a block of code defined within a class but outside any method or constructor. It is used to initialize instance variables or perform common setup tasks.
+
+- It is executed every time a new object is created, running **before the constructor.**
+
+The initialization order in a class is:
+
+1. Memory allocated;
+2. Each class attribute is initialized;
+3. The initialization block is executed;
+4. The constructor is executed;
+
+Its syntax is simply:
+
+    {
+        // code
+    }
