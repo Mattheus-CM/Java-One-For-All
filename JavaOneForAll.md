@@ -285,3 +285,13 @@ Its syntax is simply:
     {
         // code
     }
+
+### Static modifier
+
+The static modifier is a non-access modifier used to create class-level variables and methods that belong to the class itself rather than to a specific instance.
+
+- variables -> They are shared among all objects of the class and exist independently of any instance.
+
+- methods -> They can be called without an object instance and can access only other static members or parameters, not instance-specific data.
+
+- initialization blocks -> They are executed only once, before memory alocation by the JVM. They cannot access non-static attributes because non-static attributes do not exist yet.
