@@ -295,3 +295,14 @@ The static modifier is a non-access modifier used to create class-level variable
 - methods -> They can be called without an object instance and can access only other static members or parameters, not instance-specific data.
 
 - initialization blocks -> They are executed only once, before memory alocation by the JVM. They cannot access non-static attributes because non-static attributes do not exist yet.
+
+### Association
+
+Association is a concept that defines how two separate classes interact or connect through their objects. It represents a "uses-a" or "has-a" relationship, where objects know about each other and utilize each other's functionality without implying inheritance.
+
+Types of Association:
+
+- One-to-One -> A single instance of one class is associated with a single instance of another class.
+- One-to-Many -> A single instance of one class is associated with multiple instances of another class.
+- Many-to-One -> Multiple instances of one class are associated with a single instance of another class.
+- Many-to-Many -> Multiple instances of one class are associated with multiple instances of another class.
