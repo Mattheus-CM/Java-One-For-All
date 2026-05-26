@@ -20,9 +20,11 @@ It's important to organize the project into packages because, in the future, whe
 
 A good package structure makes the project easier to maintain.
 
-## Primitive types
+## Introduction
 
-### Naming convention for variables
+### Primitive types
+
+#### Naming convention for variables
 
 By convention, variable names should be written in camelCase, starting with a lowercase letter.
 
@@ -37,16 +39,16 @@ There are 8 primitive types in Java:
 - char = [any character literal] ASCII table
 - boolean = [false, true]
 
-### Casting
+#### Casting
 
 Casting is the process of converting one data type into another
 
     double myDouble = 100.5;
     int myInt = (int) myDouble; // 100 (decimal part truncated)
 
-## Operators
+### Operators
 
-### Arithmetic
+#### Arithmetic
 
 - Addition (+)
 - Subtraction (-)
@@ -54,7 +56,7 @@ Casting is the process of converting one data type into another
 - Division (/)
 - Modulo (%)
 
-### Relational
+#### Relational
 
 Always return true or false
 
@@ -65,13 +67,13 @@ Always return true or false
 - Greater than or equal to \>=
 - Less than or equal to <=
 
-### Logical
+#### Logical
 
 - And -> &&
 - Or -> ||
 - Not -> !
 
-### Assignment
+#### Assignment
 
 - =
 - +=
@@ -80,14 +82,14 @@ Always return true or false
 - /=
 - %=
 
-### Unary
+#### Unary
 
 - ++
 - \--
 
-## Conditional Statement
+### Conditional Statement
 
-### If / Else
+#### If / Else
 
 The if statement is the fundamental decision-making construct that executes a block of code when a specified boolean expression evaluates to true
 
@@ -98,14 +100,14 @@ The if statement is the fundamental decision-making construct that executes a bl
         System.out.println("Odd");
     }
 
-### Ternary Operator
+#### Ternary Operator
 
 The ternary operator is an alternative to simple if statements and is represented by the following syntax: condition ? true : false
 
     double num = 2;
     String result = num % 2 == 0 ? "Even" : "Odd";
 
-### Switch / Case
+#### Switch / Case
 
 The switch case statement is a control flow structure that executes a specific block of code on the value of a single expression, offering a cleaner alternative to multiple if-else statements.
 
@@ -122,9 +124,9 @@ The switch supports the following types: byte, short, int, char, String and Enum
         // code if no case matches
     }
 
-## Loops
+### Loops
 
-### While
+#### While
 
 The while loop is an entry-controlled control flow statement that repeatedly executes a block of code as long as a specified boolean condition evaluates to true.
 
@@ -134,7 +136,7 @@ The while loop is an entry-controlled control flow statement that repeatedly exe
 
 - The condition is evalueted before each iteration. If false, the code will not execute.
 
-### Do While
+#### Do While
 
 The difference between while and do while is that the do while loop is executed at least once;
 
@@ -142,7 +144,7 @@ The difference between while and do while is that the do while loop is executed 
         // code to be executed
     } while(condition)
 
-### For
+#### For
 
 The for loop is a control flow statement used to repeat a block of code a specific number of times, primarily when the number of iterations is know beforehand.
 
@@ -150,13 +152,13 @@ The for loop is a control flow statement used to repeat a block of code a specif
         System.out.println(i);
     }
 
-### Control flow keywords
+#### Control flow keywords
 
 - break statement is a control flow keyword used to terminate a loop or a switch statement immediately.
 
 - continue statement is used to skip the current iteration of a loop and immediately preceed to the next one, without terminating the loop itself.
 
-## Arrays
+### Arrays
 
 An array is a fixed-size data structure that stores a colection of elements of the same data type. Arrays have a fixed length defined at creation time, witch cannot be changed.
 
@@ -170,7 +172,7 @@ There is a simpler for loop called foreach. It is simpler because it does not ne
         // code to be executed
     }
 
-## Multidimensional Arrays
+### Multidimensional Arrays
 
 A multidimensional array is an array of arrays. It is as if each position in the first array contains a reference to another array. In this course, I will only study 2D multidimensional arrays, but it is possible to create 3D or even more complex multidimensional arrays. However, this also increases the complexity.
 
