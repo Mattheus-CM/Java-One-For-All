@@ -308,3 +308,71 @@ Types of Association:
 - One-to-Many -> A single instance of one class is associated with multiple instances of another class.
 - Many-to-One -> Multiple instances of one class are associated with a single instance of another class.
 - Many-to-Many -> Multiple instances of one class are associated with multiple instances of another class.
+
+### Inheritance
+
+Inheritance is a core concept in OOP, where one class (called the child class) acquires the properties and behaviors of another class(called the parent class). It represents an "is a" relationship, where objects are more specifc versions of the base class. This concept allows us to avoid rewritting the same code in two or more different files.
+
+To make a class inherit from another class, the extends keyword is used.
+
+    public class Animal {
+        protected String name;
+
+        public void eat() {
+            System.out.println(name + " is eating...");
+        }
+    }
+
+    public class Dog extends Animal {
+        public void bark() {
+            System.out.println(name + " is barking: Au Au Au...");
+        }
+    }
+
+    Dog dog = new Dog();
+    dog.name = "Teddy";
+    dog.eat();
+    dog.bark();
+
+To acess parent class members, the super keyword is used.
+
+- All classes in Java extend the Object class.
+
+#### Overriding
+
+A new concept is introduced here: **Overriding**. Overriding allows us to replace or extend the behavior of a method in a child class.
+
+    public class Animal {
+        protected String name;
+
+        public void eat() {
+            System.out.println(name + " is eating...");
+        }
+    }
+
+    public class Dog extends Animal {
+        @Override
+        public void eat() {
+            System.out.println(name + " is eating dog food...");
+        }
+    }
+
+
+    Dog dog = new Dog();
+    dog.name = "Teddy";
+    dog.eat(); // Teddy is eating dog food...
+
+#### New Initialization Order
+
+At this point, with everthing learned so far, the initialization order is:
+
+1. Static init block from the superclass is executed when JVM loads the class and only once.
+2. Static init block from the subclass is executed when JVM loads the class and only once.
+3. Memory allocated for the superclass.
+4. Each class attribute from the superclass is initialized.
+5. Init block from the superclass is executed in the order they appear.
+6. The constructor from the superclass is executed.
+7. Memory allocated for the subclass.
+8. Each class attribute from the subclass is initialized.
+9. Init block from the subclass is executed in the order they appear.
+10. The constructor from the subclass is executed.
