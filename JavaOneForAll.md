@@ -402,7 +402,7 @@ In reference type attributes, the same rules from primitive types are folliwing 
         }
         public String getName() {return this.name}
     }
-    
+
     public class Car {
         public final Buyer BUYER = new Buyer();
     }
@@ -420,3 +420,26 @@ A final method cannot be overridden by a subclass.
 #### Classes
 
 A final class cannot be extended or inherited by another class.
+
+### Enumeration
+
+An enum is a special type of class in Java that represents a fixed set of constants. Enums are ideal for scenarios such as days of the week, state machines and similar use cases.
+
+- Each constants in an Enum is implicitly public static and final.
+
+Enums can contain instance variables, constructors, and methods, allowing constants to store additional data:
+
+    enum Size {
+        SMALL(10), LARGE(20);
+
+        private int size;
+
+        Size(int size) {
+            this.size = size;
+        }
+    }
+
+All enums automatically inherit two methods:
+
+- values() -> Returns an array containing all enum constants.
+- valueOf() -> Return the enum constant associated with a given name.
