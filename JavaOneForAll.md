@@ -376,3 +376,47 @@ At this point, with everthing learned so far, the initialization order is:
 8. Each class attribute from the subclass is initialized.
 9. Init block from the subclass is executed in the order they appear.
 10. The constructor from the subclass is executed.
+
+### Final Modifier
+
+The final modifier is a non-access keyword used to restrict modifications to classes, methods, and variables, ensuring immutability, and preventing inheritance or overriding.
+
+#### Attributes - Primitive types
+
+By convention, all final attributes should have their names written in UPPERCASE, with words separated by underscores. It is also important to know that final attributes must be initialized with a value.
+
+    public class Car {
+        public final double SPEED_LIMIT = 200;
+    }
+
+- A final attribute cannot be reassigned.
+
+#### Attributes - Reference types
+
+In reference type attributes, the same rules from primitive types are folliwing also, but in the case of reference types, what is not be changed are not the values of an object but the memory reference to that object.
+
+    public class Buyer{
+        public String name;
+        public void setName(String name){
+            this.name = name;
+        }
+        public String getName() {return this.name}
+    }
+    
+    public class Car {
+        public final Buyer BUYER = new Buyer();
+    }
+
+    //test
+    Car car = new Car();
+    car.BUYER = new Buyer(); // this is not allowed
+    car.BUYER.setName("Kuririn");
+    System.out.println(car.BUYER.getName());
+
+#### Methods
+
+A final method cannot be overridden by a subclass.
+
+#### Classes
+
+A final class cannot be extended or inherited by another class.
