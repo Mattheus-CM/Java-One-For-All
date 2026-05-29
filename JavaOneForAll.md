@@ -454,3 +454,14 @@ Some rules about Abstract Classes and Abstract Methods:
 - An abstract method must be implemented by the next concrete subclass.
 - A concrete class can extend only one abstract class.
 - Abstract classes can use all access modifiers.
+
+### Interfaces
+
+Interfaces are blueprints that define a contract of methods that a class must implement, enabling abstraction and multiple inheritance of behavior. Unlike classes, interfaces cannot be instantiated, do not have constructors, and their fields are implicitly *public* *static* *final*.
+
+By default, all methods are public and abstract, requiring implementation by the implementing class.
+
+- In Java 8+, methods can have implementations using the *default* keyword.
+- Also in Java 8+, interfaces can contain static methods that are called directly from the interface name and are not inherited.
+
+Classes implement interfaces using the *implements* keyword, allowing a single class to adopt multiple behaviors.
