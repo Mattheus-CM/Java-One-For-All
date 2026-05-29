@@ -154,9 +154,9 @@ The for loop is a control flow statement used to repeat a block of code a specif
 
 #### Control flow keywords
 
-- break statement is a control flow keyword used to terminate a loop or a switch statement immediately.
+- *break* statement is a control flow keyword used to terminate a loop or a switch statement immediately.
 
-- continue statement is used to skip the current iteration of a loop and immediately preceed to the next one, without terminating the loop itself.
+- *continue* statement is used to skip the current iteration of a loop and immediately preceed to the next one, without terminating the loop itself.
 
 ### Arrays
 
@@ -253,7 +253,7 @@ The constructor syntax:
         }
     }
 
-Constructor overloading works similarly to method overloading, but to call another constructor, you use the this() keyword.
+Constructor overloading works similarly to method overloading, but to call another constructor, you use the *this()* keyword.
 
     public class Test {
         private int num;
@@ -313,7 +313,7 @@ Types of Association:
 
 Inheritance is a core concept in OOP, where one class (called the child class) acquires the properties and behaviors of another class(called the parent class). It represents an "is a" relationship, where objects are more specifc versions of the base class. This concept allows us to avoid rewritting the same code in two or more different files.
 
-To make a class inherit from another class, the extends keyword is used.
+To make a class inherit from another class, the *extends* keyword is used.
 
     public class Animal {
         protected String name;
@@ -334,7 +334,7 @@ To make a class inherit from another class, the extends keyword is used.
     dog.eat();
     dog.bark();
 
-To acess parent class members, the super keyword is used.
+To acess parent class members, the *super* keyword is used.
 
 - All classes in Java extend the Object class.
 
@@ -443,3 +443,14 @@ All enums automatically inherit two methods:
 
 - values() -> Returns an array containing all enum constants.
 - valueOf() -> Return the enum constant associated with a given name.
+
+### Abstract Classes
+
+An Abstract class is a class declared with the *abstract* keyword that cannot be instantiated directly and serves as a base class for subclasses. Abstract classes allow partial abstraction by supporting both concrete and abstract methods.
+
+Some rules about Abstract Classes and Abstract Methods:
+
+- It is not possible create objects from an abstract class.
+- An abstract method must be implemented by the next concrete subclass.
+- A concrete class can extend only one abstract class.
+- Abstract classes can use all access modifiers.
