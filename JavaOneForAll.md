@@ -465,3 +465,35 @@ By default, all methods are public and abstract, requiring implementation by the
 - Also in Java 8+, interfaces can contain static methods that are called directly from the interface name and are not inherited.
 
 Classes implement interfaces using the *implements* keyword, allowing a single class to adopt multiple behaviors.
+
+### Polymorphism
+
+Polymorphism is a core OOP concept allowing objects to take on multiple forms, enabling a single interface to perform different actions based on the object's specific type. It is primarily achieved through two mechanisms: Method overloading (compile-time/static polymorphism) and method overriding (runtime/dynamic polymorphism).
+
+#### Compile-time / static polymorphism
+
+This type of polymorphism is resolved by the compiler before execution, offering better performance and earlier error detection:
+
+    public class Calculator {
+        int add(int a, int b) { return a+b; }
+        double add(double a, double b) { return a+b; }
+    }
+
+#### Runtime / dynamic polymorphism
+
+This type of polymorphism is resolved during program execution, providing greater flexibility and extensibility:
+
+    class Animal { 
+        void sound() { 
+            System.out.println("Sound"); 
+        } 
+    }
+
+    class Dog extends Animal {
+        @Override void sound() { 
+            System.out.println("Bark"); 
+        }
+    }
+
+    Animal animal = new Dog();
+    animal.sound(); // Bark
