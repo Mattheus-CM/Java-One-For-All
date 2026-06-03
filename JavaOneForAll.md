@@ -497,3 +497,45 @@ This type of polymorphism is resolved during program execution, providing greate
 
     Animal animal = new Dog();
     animal.sound(); // Bark
+
+## Exceptions
+
+### Errors
+
+Errors represent serious system-level failures caused by the JVM or the execution environment. They are unrecoverable and unchecked. Some examples are OutOfMemoryError and StackOverflowError.
+
+- Errors in Java are not Exceptions!!
+
+### Exceptions
+
+Exceptions are categorized into two main types based on compiler enforcement: Checked exceptions and Unchecked exceptions
+
+- Checked exceptions are anticipated, recoverable events that the compiler enforces through the *catch-or-specify** requirement.
+
+- Unchecked exceptions are typically not anticipated and often result from programming errors. They are subclasses of RuntimeException and do not require explicit handling or declaration, propagating automatically up the call stack.
+
+### RuntimeExceptions
+
+Runtime exceptions representing unchecked exceptions that do not require declaration in a method's throws clause. These exceptions typically stem from programming bugs, such as logical errors or invalid API usage, rather than external resource failures. Some examples include ArrayIndexOutOfBoundsException, ArithmeticException, and NullPointerException.
+
+Unlike checked exceptions, runtime exceptions are not enforced by the compiler, allowing developers to avoid explicit handling unless specific recovery logic is required.
+
+### Try / Catch / Finally
+
+*try-catch-finally* is the standard structure for exception handling, ensuring robust code execution even when exceptions occur.
+
+- try → Contains the code that may throw an exception. If no exception occurs, the catch blocks are skipped.
+
+- catch → Handles specific exceptions thrown in the try block. Multiple catch blocks can be used, but they must be ordered from the most specific to the most general to ensure that the correct handler is triggered.
+
+- finally → Always executes after the try and catch blocks, regardless of whether an exception was thrown or caught. It is primarily used for cleanup tasks, such as closing file streams or database connections.
+
+Syntax:
+
+    try {
+        // some code
+    } catch (Exception e){
+        e.printStackTrace();
+    } finally {
+        // some code
+    }
