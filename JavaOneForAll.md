@@ -191,7 +191,7 @@ For each array dimension, it is necessary to use a for loop to iterate through i
 
 A Class is a blueprint (template) used to create objects, which are instaces of that class.
 
-- Cohesion -> High cohesion indicates that a class is designed with a single, well-focused purpose, where all methods and fields work together to archieve a commmon goal.
+- Cohesion -> High cohesion indicates that a class is designed with a single, well-focused purpose, where all methods and fields work together to achieve a common goal.
 
 ### Introduction to Methods
 
@@ -393,7 +393,7 @@ By convention, all final attributes should have their names written in UPPERCASE
 
 #### Attributes - Reference types
 
-In reference type attributes, the same rules from primitive types are folliwing also, but in the case of reference types, what is not be changed are not the values of an object but the memory reference to that object.
+In reference type attributes, the same rules from primitive types are following also, but in the case of reference types, what is not be changed are not the values of an object but the memory reference to that object.
 
     public class Buyer{
         public String name;
@@ -498,7 +498,7 @@ This type of polymorphism is resolved during program execution, providing greate
     Animal animal = new Dog();
     animal.sound(); // Bark
 
-## Exceptions
+## Errors and Exceptions
 
 ### Errors
 
@@ -510,7 +510,7 @@ Errors represent serious system-level failures caused by the JVM or the executio
 
 Exceptions are categorized into two main types based on compiler enforcement: Checked exceptions and Unchecked exceptions
 
-- Checked exceptions are anticipated, recoverable events that the compiler enforces through the *catch-or-specify** requirement.
+- Checked exceptions are anticipated, recoverable events that the compiler enforces through the **catch-or-specify** requirement.
 
 - Unchecked exceptions are typically not anticipated and often result from programming errors. They are subclasses of RuntimeException and do not require explicit handling or declaration, propagating automatically up the call stack.
 
